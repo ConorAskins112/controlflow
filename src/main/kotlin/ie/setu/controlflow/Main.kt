@@ -67,17 +67,16 @@ fun printExpressionResult(numberValue: Int, stringValue: String) = when (numberV
 }
 
 fun printInferredType(){
-    val number = 3
-    when(number){
+    when(3){
         is Int -> println ("My inferred type is Int")
     }
 }
 
 fun printAnimal(aString: String) = when {
-    aString.equals("Dog") -> "A dog"
-    aString.equals("Cat") -> "A cat"
+    aString == "Dog" -> "A dog"
+    aString == "Cat" -> "A cat"
     aString.contains("pig") -> "A pig of some sort"
-    aString.length == 0 -> "Empty String..no Animal"
+    aString.isEmpty() -> "Empty String..no Animal"
     else -> "No identifiable animal"
 }
 
@@ -125,7 +124,7 @@ fun whileWithList(){
 fun doWhileExample(){
     var index = 0
     do {
-        println("Do While Index is: " + index)
+        println("Do While Index is: $index")
         index++
     } while (index < 5)
 }
